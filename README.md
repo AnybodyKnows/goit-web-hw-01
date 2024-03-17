@@ -1,2 +1,2 @@
-# goit-web-hw-01
-goit-web-hw-01
+# goit-pycore-hw-08
+goit-pycore-hw-08

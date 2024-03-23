@@ -4,6 +4,7 @@ from datetime import datetime as dtdt
 import datetime as dt
 
 
+
 class Field:
     def __init__(self, value) -> None:
         self.value = value
@@ -127,48 +128,9 @@ class AddressBook(UserDict):
 
     def __str__(self) -> str:
         dict = {}
+        result_str = ""
         for k, v in self.items():
             dict[k] = str(v)
             result_str = "\n".join([f"{k}:{v}" for k, v in dict.items()])
         return str(result_str)
 
-# if __name__ == "__main__":
-#### -------for testing only 
-
-#     def save_data(book, filename="addressbook.pkl"):
-#         with open(filename, "wb") as f:
-#             pickle.dump(book, f)
-
-#     def load_data(filename="addressbook.pkl" ):
-#         try:
-#             with open(filename,"+rb") as f:
-#                 return pickle.load(f)
-#         except:
-#             return AddressBook() 
-
-#     book = load_data()
-#     # book= AddressBook()
-
-#     # jon = Record("jon")
-#     # jon.add_phone("1234567890")
-#     # jon.add_phone("2224567890")
-#     # jon.add_birthday ("01.01.2023") 
-#     # book.add_record(jon)
-
-#     # bob = Record("bob")
-#     # bob.add_phone("9876543210")
-#     # bob.add_birthday ("01.02.2023") 
-#     # book.add_record(bob)
-
-#     # adam = Record("adam")
-#     # adam.add_phone("9456654456")
-#     # adam.add_birthday ("01.05.2023") 
-#     # book.add_record(adam)
-
-#     # bobi = Record("bobi")
-#     # bobi.add_phone("9876543888")
-#     # bobi.add_birthday ("01.03.2023") 
-#     # book.add_record(bobi)
-
-#     print(f"{book} restored")
-#     save_data(book)
